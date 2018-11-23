@@ -8,13 +8,13 @@ const getApiUrl = () => {
   switch (env) {
     case 'dev':
     case 'staging':
-      apiUrl = 'https://staging-admin-api.mobiapp.cn:443';
+      apiUrl = '';
       break;
     case 'preProduction':
-      apiUrl = 'https://pre-admin-api.mobi.me';
+      apiUrl = '';
       break;
     case 'production':
-      apiUrl = 'https://admin-api.mobi.me';
+      apiUrl = '';
       break;
     default:
       break;
