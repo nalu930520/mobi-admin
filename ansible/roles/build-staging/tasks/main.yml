@@ -1,0 +1,17 @@
+---
+
+- name: npm install
+  command: npm install
+  args:
+    chdir: "{{ project_dir }}"
+
+- name: npm build staging
+  command: npm build:staging
+  args:
+    chdir: "{{ project_dir }}"
+
+- name: nginx restart
+  service: 
+    name: nginx
+    state: restarted
+

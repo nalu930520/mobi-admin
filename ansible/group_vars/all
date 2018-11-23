@@ -1,0 +1,8 @@
+node_version: 6.9.2
+project_name: mobi-admin
+
+project_workspace: /data
+project_dir: "{{ project_workspace }}/{{ project_name }}"
+
+
+

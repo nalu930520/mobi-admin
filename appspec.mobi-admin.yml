@@ -1,0 +1,39 @@
+version: 0.0
+os: linux
+files:
+  - source: /dist
+    destination: /jenkinsci/mobi-admin/dist
+  - source: /ansible
+    destination: /jenkinsci/mobi-admin/ansible
+  - source: /appspec.mobi-admin.yml
+    destination: /jenkinsci/mobi-admin/
+permissions:
+  - object: /jenkinsci
+    pattern: "mobi-admin"
+    owner: nginx
+    group: root
+    mode: 554
+    type:
+      - directory
+  - object: /jenkinci/mobi-admin
+    pattern: "dist"
+    owner: nginx
+    group: root
+    mode: 554
+    type:
+      - directory
+  - object: /jenkinsci/mobi-admin/dist
+    pattern: "**"
+    owner: nginx
+    group: root
+    mode: 664
+    type:
+      - file
+  - object: /jenkinsci/mobi-admin/ansible/scripts
+    pattern: "**"
+    owner: nginx
+    group: root
+    mode: 755
+    type:
+      - file
+

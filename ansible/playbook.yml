@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  user: deploy
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles: 
+     - { role: build-staging, tags: "build-staging" }
+     - { role: build-preproduction, tags: "build-preproduction"}
+     - { role: build-production, tags: "build-production"}
